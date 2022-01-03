@@ -120,6 +120,15 @@ function initLeftView() {
     }
 }
 
+// reload
+function addReload() {
+    var _reload = document.getElementById("reload");
+    _reload.onclick = function (e) {
+        e.target.style.animation = "reload 2s;";
+        console.log(e.target.style.animation);
+    }
+}
+
 window.onload = function () {
     loadLive2d();
     addSearchEvent();
@@ -127,4 +136,5 @@ window.onload = function () {
     loadRightContainer();
     setUserInfo();
     initLeftView();
+    addReload();
 }

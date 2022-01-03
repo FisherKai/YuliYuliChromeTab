@@ -161,3 +161,25 @@ body {
 .left-view .view-tab .close {
     background-color: orangered;
 }
+
+.reload {
+    background     : url("../images/icon/reload.png");
+    width          : 20px;
+    height         : 20px;
+    background-size: contain;
+    position       : absolute;
+    top            : 70%;
+    left           : 19%;
+    z-index        : 9999;
+    /* animation: reload 2s; */
+}
+
+@keyframes reload {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
