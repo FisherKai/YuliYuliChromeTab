@@ -22,8 +22,13 @@ function setUserInfo() {
     }
     // 获取用户信息
     $.get("https://bbs-api.mihoyo.com/user/wapi/getUserFullInfo", function (res) {
-        _userInfo.children[0].setAttribute('src', res.data.user_info.avatar_url);
-        _userInfo.children[1].innerHTML = res.data.user_info.nickname;
+        console.log(res);
+        if (res.data) {
+            _userInfo.children[0].setAttribute('src', res.data.user_info.avatar_url);
+            _userInfo.children[1].innerHTML = res.data.user_info.nickname;
+        } else {
+            _userInfo.children[1].innerHTML = "暂未登录";
+        }
     })
 }
 
@@ -129,12 +134,29 @@ function addReload() {
     }
 }
 
+function renderYuUI() {
+    var yRadio = new Y_Radio({
+        el: "y-radio",
+        size: 3
+    });
+    yRadio.render();
+}
+
 window.onload = function () {
+    // 加载第三方插件
     loadLive2d();
+    renderYuUI();
+
     addSearchEvent();
     loadLeftContainer();
     loadRightContainer();
     setUserInfo();
     initLeftView();
     addReload();
+
+
+    // document.getElementById("view").onclick = function () {
+    //     window.open('https://bbs.mihoyo.com/ys/article/13987617', '', 'width=632,height=388,toolbar=no, status=no, menubar=no, resizable=yes, scrollbars=yes');
+    //      return false;
+    // }
 }
