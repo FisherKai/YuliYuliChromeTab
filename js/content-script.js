@@ -6,18 +6,18 @@ console.log("%c 老余牌控制台，十年老品牌，值得信赖", "font-size
 <script src="./lib/Live2D/live2d.js"></script>
  */
 // chrome://extensions/
-var frag = document.createDocumentFragment();
-var script1 = document.createElement("script");
-var script2 = document.createElement("script");
-var script3 = document.createElement("script");
-script1.src = "https://github.com/FisherKai/YuliYuliChromeTab/blob/main/lib/Live2D/waifu-tips-text.js";
-script2.src = "https://github.com/FisherKai/YuliYuliChromeTab/blob/main/lib/Live2D/waifu-tips.js";
-script3.src = "https://github.com/FisherKai/YuliYuliChromeTab/blob/main/lib/Live2D/live2d.js";
-frag.appendChild(script1);
-frag.appendChild(script2);
-frag.appendChild(script3);
+// var frag = document.createDocumentFragment();
+// var script1 = document.createElement("script");
+// var script2 = document.createElement("script");
+// var script3 = document.createElement("script");
+// script1.src = "https://github.com/FisherKai/YuliYuliChromeTab/blob/main/lib/Live2D/waifu-tips-text.js";
+// script2.src = "https://github.com/FisherKai/YuliYuliChromeTab/blob/main/lib/Live2D/waifu-tips.js";
+// script3.src = "https://github.com/FisherKai/YuliYuliChromeTab/blob/main/lib/Live2D/live2d.js";
+// frag.appendChild(script1);
+// frag.appendChild(script2);
+// frag.appendChild(script3);
 
-setTimeout(()=>{
-    console.log(document.body.appendChild);
-    document.body.appendChild(frag);
-})
+// setTimeout(()=>{
+//     console.log(document.body.appendChild);
+//     document.body.appendChild(frag);
+// })
